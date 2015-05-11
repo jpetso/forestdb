@@ -12,6 +12,9 @@ INCLUDE(CheckLibraryExists)
 INCLUDE(CheckSymbolExists)
 INCLUDE(CheckTypeSize)
 
+# make it possible for ForestDB to be a subproject of another CMake project
+set(FORESTDB_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/include PARENT_SCOPE)
+
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/option)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/utils)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src)
